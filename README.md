@@ -1,6 +1,6 @@
 # Topics
 ## Add CRUD Operations
-## Check how to add primary key
-## How to save two tables at a time
-## How to reference foreign key
+## Add primary key
+## Save two tables at a time
+## Add reference foreign key
 
