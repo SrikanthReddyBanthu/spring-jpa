@@ -16,4 +16,13 @@ public class CustomerService {
     public List<Customer> getCustomers() {
         return customerRepository.findAll();
     }
+
+    public Customer getCustomerById(Long id) {
+
+        return customerRepository.findById(id).orElse(null);
+    }
+
+    public Customer addCustomer(Customer customer) {
+        return customerRepository.save(customer);
+    }
 }
