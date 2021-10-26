@@ -5,7 +5,8 @@
 ## How to reference foreign key
 
 
-## start spring boot Application
+# Notes
+## Start spring boot Application
 ###    ./gradlew bootRun
 ## Connect to H2 DB
 ### http://localhost:8080/h2-console

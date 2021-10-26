@@ -3,8 +3,8 @@ package com.sri.springjpa.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CUSTOMER")
-public class Customer {
+@Table(name = "customer_details")
+public class CustomerDetails {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -12,6 +12,12 @@ public class Customer {
 
     @Column
     private String name;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private PersonalDetails personalDetails;
+
+    public CustomerDetails() {
+    }
 
     public Long getId() {
         return id;
@@ -29,11 +35,11 @@ public class Customer {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+    public PersonalDetails getPersonalDetails() {
+        return personalDetails;
+    }
+
+    public void setPersonalDetails(PersonalDetails personalDetails) {
+        this.personalDetails = personalDetails;
     }
 }
